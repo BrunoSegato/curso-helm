@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2022-10-21T10:49:49.778019633-03:00"
+entries:
+  meuchart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-21T11:29:19.780584708-03:00"
+    description: A Helm chart for Kubernetes
+    digest: 252453daf594c3933bdf24c46c74daf2255ee092c28bec9221900d5f88f06da5
+    name: meuchart
+    type: application
+    urls:
+    - meuchart-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-10-21T11:29:19.778779829-03:00"
