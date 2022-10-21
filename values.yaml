@@ -1,0 +1,19 @@
+configmap:
+  enabled: false
+favorita:
+  bebida: café
+  comida: pizza
+  temperatura: quente
+times:
+  primeiro: palmeiras
+  segundo: santos
+  terceiro: botafogo
+carros:
+  - FordKA
+  - FordFiesta
+  - Fusca
+ingredientes:
+  - nome: farinha
+    local: massa
+  - nome: molho
+    local: cobertura

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: {{ .Release.Name }}-configmap
+data:
+    myvalue: "Hello World"
+    bebida: {{ .Values.favorita.bebida | default "coca" | quote }}
+    comida: {{ .Values.favorita.comida | upper | quote }}
+    {{- if and (eq .Values.favorita.bebida "café") (eq .Values.favorita.temperatura "quente") }}
+    caneca: "Sim, com protetor"
+    {{- else if and (eq .Values.favorita.bebida "café") (eq .Values.favorita.temperatura "fria") }}
+    caneca: "Sim, sem protetor"
+    {{- else }}
+    caneca: "Não"
+    {{- end }}
+    {{- with .Values.times }}
+    primeiro: {{ .primeiro }}
+    segundo: {{ .segundo }}
+    terceiro: {{ .terceiro }}
+    release: {{ $.Release.Name }}
+    {{- end }}
+    carros: |-
+        {{- range .Values.carros }}
+        - {{ . | quote }}
+        {{- end }}
+    ingredientes: |-
+        {{- range .Values.ingredientes }}
+        - nome: {{ .nome | quote }}
+          local: {{ .local | quote }}
+        {{- end }}
